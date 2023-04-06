@@ -1,0 +1,96 @@
+
+@use "variables.scss" as *;
+@use "slider-stage-one.scss";
+@use "slider-stage-two.scss";
+@use "slider-stage-three.scss";
+@use "slider-stage-four.scss";
+@use "thank-you-message.scss";
+
+.form-input-slider {
+  grid-area: inputs-container;
+
+  display: grid;
+  gap: 10%;
+  grid-template-columns: repeat(4, 100%);
+  grid-template-rows: 100%;
+  overflow: hidden;
+}
+
+.slider-section {
+  
+  transform: translateX(var(--translate-fomrY));
+  transition: transform 250ms ease-out;
+
+  .section-container {
+    padding: 2rem 4.5rem 2rem 3.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 0;
+  }
+
+  .section-message {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .section-subtitle {
+      font-size: 2rem;
+      color: var(--marine-blue);
+      font-family: var(--font-bold);
+    }
+  
+    .section-instructions {
+      color: var(--cool-gray);
+    }
+  }
+}
+
+
+@media screen and (max-width: $media-query) {
+
+  .form-input-slider {
+
+    position: absolute;
+    inset: 0 0 auto 0;
+    margin: auto;
+    transform: translateY(-30%);
+
+    grid-area: inputs-container;
+    width: 100%;
+    margin: auto;
+    height: fit-content;
+    padding: 5%;
+    background: transparent;
+
+  }
+
+  .slider-section {
+    
+    .section-container {
+      padding: 2rem 1.5rem;
+      background: var(--white);
+      gap: 1.5rem;
+      min-height: 100px;
+      width: 100%;
+      border-radius: .8rem;
+      box-shadow: 3px 3px 20px var(--light-gray);
+
+      background: var(--white);
+    }
+  
+    .section-message {
+      gap: .5rem;
+    
+      .section-subtitle {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

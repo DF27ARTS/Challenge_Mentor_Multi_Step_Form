@@ -1,0 +1,116 @@
+
+@use "variables.scss" as *;
+
+.form-siderbar {
+  grid-area: sidebar;
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  .single-step-container {
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .step-number {
+    height: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    color: var(--white);
+
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--font-bold);
+
+    transition: background-color 250ms ease;
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-blue);
+      color: var(--marine-blue);
+      border: none;
+    }
+
+    &.finished:hover,
+    &.finished:focus {
+      background-color: transparent;
+      color: var(--white);
+      border: 1px solid var(--white);
+      cursor: default;
+    }
+  }
+
+  .step-number-active {
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
+    font-family: var(--font-bold);
+    border: none;
+  }
+
+  .step-text-container {
+    display: flex;
+    flex-direction: column;
+
+    * {
+      color: var(--light-white);
+      font-size: calc(var(--basic-font-size) / 1.1);
+      transition: color 250ms ease;
+    }
+
+    & :last-child {
+      color: var(--white);
+      font-family: var(--font-bold);
+    }
+  }
+}
+
+@media screen and (max-width: $media-query) {
+
+  .form-siderbar {
+    grid-area: sidebar;
+    background-image: url("../assets/images/bg-sidebar-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    padding: 2rem 4rem;
+    
+    .single-step-container {
+      border-radius: 2px solid red;
+      height: 2.5rem;
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+
+
+  .step-text-container {
+    display: none !important; ;
+  }
+}

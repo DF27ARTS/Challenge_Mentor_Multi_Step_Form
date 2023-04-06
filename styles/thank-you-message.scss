@@ -1,0 +1,64 @@
+
+@use "variables.scss" as *;
+
+.success-message-container {
+  --transition: cubic-bezier(0.23, 0.22, 0.6, 1.45);
+
+  position: absolute;
+  inset: 0 0 0 31%;
+  margin: auto;
+
+  background: var(--white);
+  min-height: 100%;
+  border-radius: .8rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5rem;
+
+  transform: scale(0);
+  transition: transform var(--transition) 250ms;
+
+
+  .success-message-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .success-message-title {
+      color: var(--marine-blue);
+      font-family: var(--font-bold);
+      font-size: calc(var(--basic-font-size) * 2);
+    }
+
+    .success-message-description {
+      color: var(--cool-gray);
+      text-align: center;
+    }
+  }
+}
+
+.success-message-active {
+  transform: scale(1);
+}
+
+
+@media screen and (max-width: $media-query) {
+  .success-message-container {
+    border-radius: 1rem;
+    min-height: 75%;
+    padding: 2.5rem;
+
+    inset: 0 1rem 10rem 1rem;
+    box-shadow: 10px 10px 30px var(--cool-gray);
+  }
+}

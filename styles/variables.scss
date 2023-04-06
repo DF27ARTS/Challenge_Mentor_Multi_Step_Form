@@ -1,0 +1,63 @@
+
+
+/*---- FONTS ----*/
+
+@font-face {
+  font-family: "font-regular";
+  src: url("../assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font-medium";
+  src: url("../assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font-bold";
+  src: url("../assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+}
+
+$media-query: 450px;
+
+:root {
+  /*---- COLORS ----*/
+
+  // Primary
+  --marine-blue: hsl(213, 96%, 18%);
+  --light-marine-blue: hsla(213, 96%, 28%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --light-purplish-blue: hsl(243, 100%, 62%, .7);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  // Neutral
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+  --light-white: hsla(0, 0%, 100%, .5);
+
+
+  /*---- TYPOGRAPHY ----*/
+
+  // Body Font-size
+  --basic-font-size: 16px;
+
+
+  // Font weight: 
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+
+  // Font family
+  --font-regular: font-regular;
+  --font-medium: font-medium;
+  --font-bold: font-bold;
+
+
+  /*---- Slider form stage variable ----*/
+  --translate-fomrY: -0%;
+
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="./main_styles/styles.css" />
+    <script type="module" src="src/script.js" defer></script>
+  </head>
+  <body>
+    <main class="form-container">
+      <sidebar class="form-siderbar">
+        <div class="single-step-container">
+          <button class="step-number step-number-active">1</button>
+          <div class="step-text-container">
+            <span class="step-text-number">STEP 1</span>
+            <span class="step-text-info">YOUR INFO</span>
+          </div>
+        </div>
+        <div class="single-step-container">
+          <button class="step-number">2</button>
+          <div class="step-text-container">
+            <span class="step-text-number">STEP 2</span>
+            <span class="step-text-info">SELECT PLAN</span>
+          </div>
+        </div>
+        <div class="single-step-container">
+          <button class="step-number">3</button>
+          <div class="step-text-container">
+            <span class="step-text-number">STEP 3</span>
+            <span class="step-text-info">ADD-ONS</span>
+          </div>
+        </div>
+        <div class="single-step-container">
+          <button class="step-number">4</button>
+          <div class="step-text-container">
+            <span class="step-text-number">STEP 4</span>
+            <span class="step-text-info">SUMMARY</span>
+          </div>
+        </div>
+      </sidebar>
+      <form class="form-input-slider">
+        <div class="slider-section">
+          <div class="section-container">
+            <div class="section-message">
+              <h2 class="section-subtitle">Personal info</h2>
+              <span class="section-instructions">
+                Please provide your name, email address, and phone number.
+              </span>
+            </div>
+
+            <div class="inputs-container">
+              <div
+                area-message="This field is required"
+                class="single-input-container"
+              >
+                <span class="single-input-message">Name</span>
+                <input
+                  autofocus
+                  name="name"
+                  placeholder="e.g. Stephen King"
+                  type="text"
+                  class="single-input"
+                />
+              </div>
+              <div
+                area-message="This field is required"
+                class="single-input-container"
+              >
+                <span class="single-input-message">Email Address</span>
+                <input
+                  name="email"
+                  placeholder="e.g. stephenking@lorem.com"
+                  type="email"
+                  class="single-input"
+                />
+              </div>
+              <div
+                area-message="This field is required"
+                class="single-input-container"
+              >
+                <span class="single-input-message">Phone Number</span>
+                <input
+                  name="phone"
+                  placeholder="e.g. +1 234 567 890"
+                  type="text"
+                  class="single-input"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-section">
+          <div class="section-container">
+            <div class="section-message">
+              <h2 class="section-subtitle">Select your plan</h2>
+              <span class="section-instructions">
+                You have the option of monthly ot yearly billing.
+              </span>
+            </div>
+
+            <div class="container-bill-card-and-slider">
+              <div class="container-billing-cards">
+                <div class="billing-card card-selected">
+                  <img
+                    src="./assets/images/icon-arcade.svg"
+                    alt="billing card icon"
+                    class="billing-card-icon"
+                  />
+                  <div class="billing-card-text-container">
+                    <span class="billing-card-title">Arcade</span>
+                    <div class="billing-amount">$9/mo</div>
+                    <div class="card-text-free-access">2 months free</div>
+                  </div>
+                </div>
+                <div class="billing-card">
+                  <img
+                    src="./assets/images/icon-advanced.svg"
+                    alt="billing card icon"
+                    class="billing-card-icon"
+                  />
+                  <div class="billing-card-text-container">
+                    <span class="billing-card-title">Advanced</span>
+                    <div class="billing-amount">$12/mo</div>
+                    <div class="card-text-free-access">2 months free</div>
+                  </div>
+                </div>
+                <div class="billing-card">
+                  <img
+                    src="./assets/images/icon-pro.svg"
+                    alt="billing card icon"
+                    class="billing-card-icon"
+                  />
+                  <div class="billing-card-text-container">
+                    <span class="billing-card-title">Pro</span>
+                    <div class="billing-amount">$15/mo</div>
+                    <div class="card-text-free-access">2 months free</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-month-year-slider">
+                <div
+                  class="month-year-slider-text month-year-slider-text-active"
+                >
+                  Monthly
+                </div>
+                <div class="month-year-slicer"></div>
+                <div class="month-year-slider-text">Yearly</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-section">
+          <div class="section-container">
+            <div class="section-message">
+              <h2 class="section-subtitle">Pick add-ons</h2>
+              <span class="section-instructions">
+                Add-ons help enhance your gaming experience.
+              </span>
+            </div>
+
+            <div class="container-add-ons">
+              <div class="single-add-ons-card check-mark-active">
+                <div class="add-ons-check-mark">
+                  <img
+                    src="./assets/images/icon-checkmark.svg"
+                    alt="check-mark icon"
+                    class="check-mark"
+                  />
+                </div>
+                <div class="container-add-ons-text">
+                  <div class="single-add-ons-card-title">Online service</div>
+                  <div class="single-add-ons-card-text">
+                    Access to multiplayer games
+                  </div>
+                </div>
+                <div area-amount="online_service" class="add-ons-card-amount">
+                  +$1/mo
+                </div>
+              </div>
+
+              <div class="single-add-ons-card check-mark-active">
+                <div class="add-ons-check-mark">
+                  <img
+                    src="./assets/images/icon-checkmark.svg"
+                    alt="check-mark icon"
+                    class="check-mark"
+                  />
+                </div>
+                <div class="container-add-ons-text">
+                  <div class="single-add-ons-card-title">Larger storage</div>
+                  <div class="single-add-ons-card-text">
+                    Extra 1TB of cloud save
+                  </div>
+                </div>
+                <div area-amount="larger_storage" class="add-ons-card-amount">
+                  +$2/mo
+                </div>
+              </div>
+
+              <div class="single-add-ons-card">
+                <div class="add-ons-check-mark">
+                  <img
+                    src="./assets/images/icon-checkmark.svg"
+                    alt="check-mark icon"
+                    class="check-mark"
+                  />
+                </div>
+                <div class="container-add-ons-text">
+                  <div class="single-add-ons-card-title">
+                    Customizable profile
+                  </div>
+                  <div class="single-add-ons-card-text">
+                    Custom theme on your profile
+                  </div>
+                </div>
+                <div
+                  area-amount="customizable_profile"
+                  class="add-ons-card-amount"
+                >
+                  +$2/mo
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-section">
+          <div class="section-container">
+            <div class="section-message">
+              <h2 class="section-subtitle">Finishing up</h2>
+              <span class="section-instructions">
+                Double-check everything looks OK before confirming.
+              </span>
+            </div>
+
+            <div class="container-confirm-message">
+              <div class="container-confirm-data-one">
+                <div class="container-bill">
+                  <div class="bill-selected">Arcade (Monthly)</div>
+                  <div class="change-link">Change</div>
+                </div>
+                <div class="total-bill-amount">$9/mo</div>
+              </div>
+
+              <div class="container-confirm-data-two"></div>
+
+              <div class="container-total">
+                <div class="total-text">Total (per month)</div>
+                <div class="total-amount">+$12/mo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="success-message-container">
+          <img
+            src="./assets/images/icon-thank-you.svg"
+            alt="success icon"
+            class="success-message-icon"
+          />
+          <div class="success-message-text-container">
+            <h2 class="success-message-title">Thank you!</h2>
+            <p class="success-message-description">
+              Thaks for confirming your subscription! We hope you have fun using
+              our platform. If you ever need support, please feel free to email
+              us at support@loremgaming.com.
+            </p>
+          </div>
+        </div>
+      </form>
+      <div class="form-navigation-buttons">
+        <div class="goback-btn-container">
+          <button class="form-go-back display-none">Go Back</button>
+        </div>
+        <button class="form-next-step">Next Step</button>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

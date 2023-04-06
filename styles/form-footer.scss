@@ -1,0 +1,84 @@
+
+@use "variables.scss" as *;
+
+.form-navigation-buttons {
+  grid-area: navigation-buttons;
+  background: var(--white);
+
+  display: flex;
+  align-items: center;
+  padding: 2rem 4.5rem 2rem 3.5rem;
+
+  & * {
+    border: none;
+    outline: none;
+    font-family: var(--font-medium);
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+
+    transition: 
+      color 250ms ease,
+      background-color 250ms ease;
+  }
+
+  .goback-btn-container {
+    flex-grow: 1;
+  }
+
+  .form-go-back {
+    background: transparent;
+    color: var(--cool-gray);
+
+    display: flex;
+    align-items: flex-start;
+
+    &:hover,
+    &:focus {
+      color: var(--marine-blue);
+    }
+
+    &.display-none {
+      display: none;
+    }
+  }
+
+  .form-next-step {
+    height: 3rem;
+    width: 8rem;
+    background-color: var(--marine-blue);
+    border-radius: .5rem;
+    color: var(--light-gray);
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-marine-blue);
+    }
+
+    &.confirm {
+      background: var(--purplish-blue);
+
+      &:hover {
+        background: var(--light-purplish-blue);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: $media-query) {
+  .form-navigation-buttons {
+    padding: 1rem ;
+    height: 80%;
+    align-self: flex-end;
+
+    & * {
+      font-size: calc(var(--basic-font-size) * 1.1);
+    }
+
+    .form-next-step {
+      height: 3.5rem;
+      width: 8rem;
+    }
+  }
+}

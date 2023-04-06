@@ -1,0 +1,108 @@
+
+@use "variables.scss" as *;
+
+.container-confirm-message {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container-confirm-data-one {
+  display: flex;
+  background: var(--alabaster);
+  border-radius: .5rem .5rem 0 0;
+  padding: 1.5rem;
+  align-items: center;
+
+  position: relative;
+
+  &:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    transform: translateY(200%);
+    height: 1px;
+    width: 90%;
+    background: var(--light-gray);
+  }
+
+  .container-bill {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    flex-grow: 1;
+
+    .bill-selected {
+      color: var(--marine-blue);
+      font-family: var(--font-bold);
+    }
+
+    .change-link {
+      color: var(--cool-gray);
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--marine-blue);
+      }
+    }
+
+
+  }
+
+  .total-bill-amount{
+    color: var(--marine-blue);
+    font-family: var(--font-bold);
+  }
+}
+
+.container-confirm-data-two {
+
+  display: flex;
+  gap: 1rem;
+  background: var(--alabaster);
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 0 0 .5rem .5rem;
+
+
+  .container-confirm-add-ons {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .confirm-add-ons-text {
+    flex-grow: 1;
+
+    display: flex;
+    color: var(--cool-gray);
+  }
+
+  .confirm-add-ons-amount {
+    color: var(--marine-blue);
+  }
+}
+
+.container-total {
+  height: 2.8rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 1.5rem;
+
+  .total-text {
+    flex-grow: 1;
+    color: var(--cool-gray);
+  }
+
+  .total-amount {
+    color: var(--purplish-blue);
+    font-family: var(--font-bold);
+    font-size: calc(var(--basic-font-size) * 1.2);
+  }
+}
+
+

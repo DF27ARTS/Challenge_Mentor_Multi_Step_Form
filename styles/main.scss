@@ -1,0 +1,28 @@
+
+@use "variables.scss";
+@use "form.scss";
+@use "sidebar.scss";
+@use "form-slider.scss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-size: var(--basic-font-size);
+  font-family: var(--font-regular);
+
+  background: var(--magnolia);
+  height: 100vh;
+  width: 100vw;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
