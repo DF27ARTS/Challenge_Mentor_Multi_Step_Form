@@ -65,7 +65,7 @@
         <div class="slider-section">
           <div class="section-container">
             <div class="section-message">
-              <h2 class="section-subtitle">Personal info</h2>
+              <h1 class="section-subtitle">Personal info</h1>
               <span class="section-instructions">
                 Please provide your name, email address, and phone number.
               </span>
@@ -84,6 +84,7 @@
                   placeholder="e.g. Stephen King"
                   type="text"
                   class="single-input"
+                  spellcheck="false"
                 />
               </div>
               <div
@@ -97,6 +98,7 @@
                   placeholder="e.g. stephenking@lorem.com"
                   type="email"
                   class="single-input"
+                  spellcheck="false"
                 />
               </div>
               <div
@@ -108,8 +110,9 @@
                   autocomplete="off"
                   name="phone"
                   placeholder="e.g. +1 234 567 890"
-                  type="text"
+                  type="tel"
                   class="single-input"
+                  spellcheck="false"
                 />
               </div>
             </div>
@@ -171,7 +174,7 @@
                 >
                   Monthly
                 </div>
-                <button type="button" class="month-year-slicer"></button>
+                <div tabindex="0" class="month-year-slicer"></div>
                 <div class="month-year-slider-text">Yearly</div>
               </div>
             </div>

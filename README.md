@@ -54,7 +54,7 @@ Users should be able to:
     src="./screenshots/desk-top-design-01.jpeg" 
     alt="Desktop desing example one" 
     style="
-      width: 20rem;
+      width: 17rem;
       max-width: 80vw;
     "
   />
@@ -62,7 +62,7 @@ Users should be able to:
     src="./screenshots/desk-top-design-02.jpeg" 
     alt="Desktop desing example two" 
     style="
-      width: 20rem;
+      width: 17rem;
       max-width: 80vw;
     "
 />
@@ -70,7 +70,7 @@ Users should be able to:
     src="./screenshots/desk-top-design-03.jpeg" 
     alt="Desktop desing example three" 
     style="
-      width: 20rem;
+      width: 17rem;
       max-width: 80vw;
     "
   />
@@ -78,7 +78,7 @@ Users should be able to:
     src="./screenshots/desk-top-design-04.jpeg" 
     alt="Desktop desing example four" 
     style="
-      width: 20rem;
+      width: 17rem;
       max-width: 80vw;
     "
   />
@@ -86,7 +86,7 @@ Users should be able to:
     src="./screenshots/desk-top-design-05.jpeg" 
     alt="Desktop desing example five" 
     style="
-      width: 20rem;
+      width: 17rem;
       max-width: 80vw;
     "
   />
@@ -106,7 +106,7 @@ Users should be able to:
     src="./screenshots/movile-design-01.jpeg" 
     alt="Movile desing example one" 
     style="
-      width: 15rem;
+      width: 10rem;
       max-width: 80vw;
     "
   />
@@ -114,7 +114,7 @@ Users should be able to:
     src="./screenshots/movile-design-02.jpeg" 
     alt="Movile desing example two" 
     style="
-      width: 15rem;
+      width: 10rem;
       max-width: 80vw;
     "
   />
@@ -122,7 +122,7 @@ Users should be able to:
     src="./screenshots/movile-design-03.jpeg" 
     alt="Movile desing example three" 
     style="
-      width: 15rem;
+      width: 10rem;
       max-width: 80vw;
     "
   />
@@ -130,7 +130,7 @@ Users should be able to:
     src="./screenshots/movile-design-04.jpeg" 
     alt="Movile desing example four" 
     style="
-      width: 15rem;
+      width: 10rem;
       max-width: 80vw;
     "
   />
@@ -138,7 +138,7 @@ Users should be able to:
     src="./screenshots/movile-design-05.jpeg" 
     alt="Movile desing example five" 
     style="
-      width: 15rem;
+      width: 10rem;
       max-width: 80vw;
     "
   />
