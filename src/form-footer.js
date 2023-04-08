@@ -60,7 +60,9 @@ const FormGoBackButton = (value, hideButton = false) => {
   goBackButton?.classList.toggle("display-none", hideButton);
 
   const HandleClick = () => {
-    DomElement?.style.setProperty("--translate-fomrY", `-${value}${value}0%`);
+    sliderSection?.forEach((section) => {
+      section.style.transform = `translateX(-${value}${value}0%)`;
+    });
   };
 
   if (value >= 0) {
@@ -68,11 +70,7 @@ const FormGoBackButton = (value, hideButton = false) => {
   }
 };
 
-const FormGoAheadButton = (
-  value,
-  confirmButton = false,
-  thankYouMessage = false
-) => {
+const FormGoAheadButton = (value, confirmButton = false) => {
   goAheadButton?.classList.toggle("confirm", confirmButton);
   if (confirmButton) {
     goAheadButton.innerText = "Confirm";
@@ -81,28 +79,39 @@ const FormGoAheadButton = (
   }
 
   const HandleClick = () => {
-    // if (!CheckInputFormatStageOne()) return;
-    // if (!checkValuesSelectedStageThree()) return;
+    if (!CheckInputFormatStageOne()) return;
+    if (!checkValuesSelectedStageThree()) return;
 
-    DomElement?.style.setProperty("--translate-fomrY", `-${value}${value}0%`);
+    sliderSection?.forEach((section) => {
+      section.style.transform = `translateX(-${value}${value}0%)`;
+    });
   };
 
   const openThankYouMessage = () => {
-    // if (!checkValuesSelectedStageThree()) return;
     recreateSidebarButton();
+    removeFooter();
     ThankYouMessage?.classList.add("success-message-active");
   };
 
   if (value === 4) {
-    changeConfirmButton(openThankYouMessage, "Confirm", "confirm");
+    changeConfirmButton(openThankYouMessage, "submit", "Confirm", "confirm");
   }
 
   if (value <= 3) {
-    changeConfirmButton(HandleClick, "Next Step");
+    changeConfirmButton(HandleClick, "button", "Next Step");
   }
 };
 
-const changeConfirmButton = (eventListener, text, className = null) => {
+const removeFooter = () => {
+  const formContainer = document.querySelector(".form-container");
+  const formNavigationButtons = document.querySelector(
+    ".form-navigation-buttons"
+  );
+
+  if (formNavigationButtons) formContainer?.removeChild(formNavigationButtons);
+};
+
+const changeConfirmButton = (eventListener, type, text, className = null) => {
   const formNavigationButtons = document.querySelector(
     ".form-navigation-buttons"
   );
@@ -114,6 +123,8 @@ const changeConfirmButton = (eventListener, text, className = null) => {
   button.classList.add("form-next-step");
   if (className) button.classList.add(className);
   button.textContent = text;
+  button.type = type;
+
   button.addEventListener("click", () => eventListener());
 
   formNavigationButtons.appendChild(button);

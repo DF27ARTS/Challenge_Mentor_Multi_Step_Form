@@ -4,8 +4,6 @@
 
 
 .form-container {
-  height: 38rem;
-  // width: 58rem;
   position: relative;
 
   background: var(--white);
@@ -14,16 +12,13 @@
   box-shadow: 10px 10px 50px var(--light-gray);
 
   display: grid;
-  // gap: 2rem;
+  gap: 1rem;
   grid-template-areas: 
-    "sidebar inputs-container"
-    "sidebar inputs-container"
-    "sidebar inputs-container"
     "sidebar inputs-container"
     "sidebar navigation-buttons"
   ;
-  grid-template-columns: 17rem 40rem;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 17rem 39rem;
+  grid-template-rows: 29.5rem 5rem;
 }
 
 
@@ -50,6 +45,8 @@
     ;
     grid-template-columns: 100%;
     grid-template-rows: repeat(7, 1fr);
+  // grid-template-rows: fit-contern 5rem;
+
     background: var(--magnolia);
   }
 }

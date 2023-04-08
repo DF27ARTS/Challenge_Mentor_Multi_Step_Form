@@ -73,9 +73,23 @@
       transition: color 250ms ease;
     }
 
+    .step-text-number {
+      display: flex; 
+      align-items: center;
+      gap: .2rem;
+      font-size: calc(var(--basic-font-size) / 1.2);
+
+      
+      & div {
+        font-size: calc(var(--basic-font-size) / 1.2);
+        font-family: var(--font-regular);
+        color: var(--light-white);
+      }
+    }
+
     & :last-child {
       color: var(--white);
-      font-family: var(--font-bold);
+      font-family: var(--font-medium);
     }
   }
 }
@@ -96,13 +110,13 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 0;
+    gap: 1.5rem;
     padding: 2rem 4rem;
+
     
     .single-step-container {
-      border-radius: 2px solid red;
       height: 2.5rem;
-      width: 100%;
+      width: fit-content;
       display: flex;
       gap: 1rem;
       align-items: center;

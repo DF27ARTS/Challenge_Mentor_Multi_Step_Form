@@ -40,13 +40,68 @@ const HandleClickAddOns = (index) => {
   }
 };
 
+const clearAlertMessage = () => {
+  const addOnsContainer = document.querySelector(".container-add-ons");
+  const alertContainer = document.querySelector(".alert-message");
+
+  setTimeout(() => {
+    alertContainer?.classList.remove("active");
+    setTimeout(() => {
+      if (alertContainer) addOnsContainer?.removeChild(alertContainer);
+    }, 500);
+  }, 4500);
+};
+
+const HandleClickCloseAlertMessage = (e) => {
+  e.preventDefault();
+
+  const addOnsContainer = document.querySelector(".container-add-ons");
+  const alertContainer = document.querySelector(".alert-message");
+
+  alertContainer?.classList.remove("active");
+  setTimeout(() => {
+    addOnsContainer.removeChild(alertContainer);
+  }, 500);
+};
+
+const setAlertMessageSectionThree = () => {
+  const addOnsContainer = document.querySelector(".container-add-ons");
+
+  const alertContainer = document.createElement("div");
+  alertContainer?.classList.add("alert-message");
+
+  const closeAlertButton = document.createElement("button");
+  closeAlertButton?.classList.add("closed-alert-button");
+  closeAlertButton.textContent = "+";
+  closeAlertButton?.addEventListener("click", (e) =>
+    HandleClickCloseAlertMessage(e)
+  );
+
+  const alertMessageText = document.createElement("div");
+  alertMessageText?.classList.add("alert-message-text");
+  alertMessageText.textContent = "Select your add-ons package";
+
+  alertContainer.appendChild(closeAlertButton);
+  alertContainer.appendChild(alertMessageText);
+
+  addOnsContainer?.appendChild(alertContainer);
+
+  setTimeout(() => {
+    alertContainer?.classList.add("active");
+  }, 50);
+
+  clearAlertMessage();
+};
+
 export const checkValuesSelectedStageThree = () => {
   let result = false;
   stage_three.forEach((value) => {
-    if (!value.name || !value.value) {
+    if (value.name || value.value) {
       result = true;
     }
   });
+
+  if (!result) setAlertMessageSectionThree();
   return result;
 };
 

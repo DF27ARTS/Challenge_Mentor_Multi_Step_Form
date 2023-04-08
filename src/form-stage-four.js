@@ -1,5 +1,6 @@
 /* __________ Imports ___________ */
 import { userInformation } from "./form-information.js";
+import { setSidebarActiveButton } from "./sidebar.js";
 
 /* __________ Tags ___________ */
 const containerConfirmDataTwo = document.querySelector(
@@ -10,6 +11,8 @@ const totalAmount = document.querySelector(".total-amount");
 
 const billSelected = document.querySelector(".bill-selected");
 const totalBilAmount = document.querySelector(".total-bill-amount");
+
+const sliderSection = document.querySelectorAll(".slider-section");
 
 const changeLink = document.querySelector(".change-link");
 
@@ -174,6 +177,8 @@ export const changeBillingAndAddOnsMonthlyYearly = (value) => {
 
 /* __________ Listener ___________ */
 changeLink.addEventListener("click", () => {
-  document.documentElement?.style.setProperty("--translate-fomrY", `-110%`);
   setSidebarActiveButton(1);
+  sliderSection?.forEach((section) => {
+    section.style.transform = `translateX(-110%)`;
+  });
 });

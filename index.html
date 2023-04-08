@@ -19,30 +19,44 @@
     <main class="form-container">
       <sidebar class="form-siderbar">
         <div class="single-step-container">
-          <button class="step-number step-number-active">1</button>
+          <button type="button" class="step-number step-number-active">
+            1
+          </button>
           <div class="step-text-container">
-            <span class="step-text-number">STEP 1</span>
+            <span class="step-text-number"
+              >STEP
+              <div>1</div>
+            </span>
             <span class="step-text-info">YOUR INFO</span>
           </div>
         </div>
         <div class="single-step-container">
-          <button class="step-number">2</button>
+          <button type="button" class="step-number">2</button>
           <div class="step-text-container">
-            <span class="step-text-number">STEP 2</span>
+            <span class="step-text-number"
+              >STEP
+              <div>2</div></span
+            >
             <span class="step-text-info">SELECT PLAN</span>
           </div>
         </div>
         <div class="single-step-container">
-          <button class="step-number">3</button>
+          <button type="button" class="step-number">3</button>
           <div class="step-text-container">
-            <span class="step-text-number">STEP 3</span>
+            <span class="step-text-number"
+              >STEP
+              <div>3</div></span
+            >
             <span class="step-text-info">ADD-ONS</span>
           </div>
         </div>
         <div class="single-step-container">
-          <button class="step-number">4</button>
+          <button type="button" class="step-number">4</button>
           <div class="step-text-container">
-            <span class="step-text-number">STEP 4</span>
+            <span class="step-text-number"
+              >STEP
+              <div>4</div></span
+            >
             <span class="step-text-info">SUMMARY</span>
           </div>
         </div>
@@ -64,6 +78,7 @@
               >
                 <span class="single-input-message">Name</span>
                 <input
+                  autocomplete="off"
                   autofocus
                   name="name"
                   placeholder="e.g. Stephen King"
@@ -77,6 +92,7 @@
               >
                 <span class="single-input-message">Email Address</span>
                 <input
+                  autocomplete="off"
                   name="email"
                   placeholder="e.g. stephenking@lorem.com"
                   type="email"
@@ -89,6 +105,7 @@
               >
                 <span class="single-input-message">Phone Number</span>
                 <input
+                  autocomplete="off"
                   name="phone"
                   placeholder="e.g. +1 234 567 890"
                   type="text"
@@ -110,7 +127,7 @@
 
             <div class="container-bill-card-and-slider">
               <div class="container-billing-cards">
-                <div class="billing-card card-selected">
+                <button type="button" class="billing-card card-selected">
                   <img
                     src="./assets/images/icon-arcade.svg"
                     alt="billing card icon"
@@ -118,11 +135,11 @@
                   />
                   <div class="billing-card-text-container">
                     <span class="billing-card-title">Arcade</span>
-                    <div class="billing-amount">$9/mo</div>
+                    <div class="billing-amount display-none">$9/mo</div>
                     <div class="card-text-free-access">2 months free</div>
                   </div>
-                </div>
-                <div class="billing-card">
+                </button>
+                <button type="button" class="billing-card">
                   <img
                     src="./assets/images/icon-advanced.svg"
                     alt="billing card icon"
@@ -130,11 +147,11 @@
                   />
                   <div class="billing-card-text-container">
                     <span class="billing-card-title">Advanced</span>
-                    <div class="billing-amount">$12/mo</div>
+                    <div class="billing-amount display-none">$12/mo</div>
                     <div class="card-text-free-access">2 months free</div>
                   </div>
-                </div>
-                <div class="billing-card">
+                </button>
+                <button type="button" class="billing-card">
                   <img
                     src="./assets/images/icon-pro.svg"
                     alt="billing card icon"
@@ -142,10 +159,10 @@
                   />
                   <div class="billing-card-text-container">
                     <span class="billing-card-title">Pro</span>
-                    <div class="billing-amount">$15/mo</div>
+                    <div class="billing-amount display-none">$15/mo</div>
                     <div class="card-text-free-access">2 months free</div>
                   </div>
-                </div>
+                </button>
               </div>
 
               <div class="container-month-year-slider">
@@ -154,7 +171,7 @@
                 >
                   Monthly
                 </div>
-                <div class="month-year-slicer"></div>
+                <button type="button" class="month-year-slicer"></button>
                 <div class="month-year-slider-text">Yearly</div>
               </div>
             </div>
@@ -171,7 +188,10 @@
             </div>
 
             <div class="container-add-ons">
-              <div class="single-add-ons-card check-mark-active">
+              <button
+                type="button"
+                class="single-add-ons-card check-mark-active"
+              >
                 <div class="add-ons-check-mark">
                   <img
                     src="./assets/images/icon-checkmark.svg"
@@ -188,9 +208,12 @@
                 <div area-amount="online_service" class="add-ons-card-amount">
                   +$1/mo
                 </div>
-              </div>
+              </button>
 
-              <div class="single-add-ons-card check-mark-active">
+              <button
+                type="button"
+                class="single-add-ons-card check-mark-active"
+              >
                 <div class="add-ons-check-mark">
                   <img
                     src="./assets/images/icon-checkmark.svg"
@@ -207,9 +230,9 @@
                 <div area-amount="larger_storage" class="add-ons-card-amount">
                   +$2/mo
                 </div>
-              </div>
+              </button>
 
-              <div class="single-add-ons-card">
+              <button type="button" class="single-add-ons-card">
                 <div class="add-ons-check-mark">
                   <img
                     src="./assets/images/icon-checkmark.svg"
@@ -231,7 +254,7 @@
                 >
                   +$2/mo
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -249,7 +272,7 @@
               <div class="container-confirm-data-one">
                 <div class="container-bill">
                   <div class="bill-selected">Arcade (Monthly)</div>
-                  <div class="change-link">Change</div>
+                  <button type="button" class="change-link">Change</button>
                 </div>
                 <div class="total-bill-amount">$9/mo</div>
               </div>
@@ -263,6 +286,7 @@
             </div>
           </div>
         </div>
+
         <div class="success-message-container">
           <img
             src="./assets/images/icon-thank-you.svg"

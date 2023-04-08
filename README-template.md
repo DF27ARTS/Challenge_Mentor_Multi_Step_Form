@@ -1,6 +1,15 @@
-# Frontend Mentor - Multi-step form solution
+<div style="
+  display: flex; 
+  flex-direction: column;
+  width: 200%; 
+  padding: 5rem 0;
+  gap: 1.5rem;
+  max-width: 80vw 
+">
+  
+  # Frontend Mentor - Multi-step form solution
 
-This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,12 +20,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -36,22 +40,118 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Desktop design
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+<div 
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+  "
+>
+  <img 
+    src="./screenshots/desk-top-design-01.jpeg" 
+    alt="Desktop desing example one" 
+    style="
+      width: 20rem;
+      max-width: 80vw;
+    "
+  />
+  <img 
+    src="./screenshots/desk-top-design-02.jpeg" 
+    alt="Desktop desing example two" 
+    style="
+      width: 20rem;
+      max-width: 80vw;
+    "
+/>
+<img 
+    src="./screenshots/desk-top-design-03.jpeg" 
+    alt="Desktop desing example three" 
+    style="
+      width: 20rem;
+      max-width: 80vw;
+    "
+  />
+<img 
+    src="./screenshots/desk-top-design-04.jpeg" 
+    alt="Desktop desing example four" 
+    style="
+      width: 20rem;
+      max-width: 80vw;
+    "
+  />
+<img 
+    src="./screenshots/desk-top-design-05.jpeg" 
+    alt="Desktop desing example five" 
+    style="
+      width: 20rem;
+      max-width: 80vw;
+    "
+  />
+</div>
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+### Movile design
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<div 
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+  "
+>
+  <img 
+    src="./screenshots/movile-design-01.jpeg" 
+    alt="Movile desing example one" 
+    style="
+      width: 15rem;
+      max-width: 80vw;
+    "
+  />
+  <img 
+    src="./screenshots/movile-design-02.jpeg" 
+    alt="Movile desing example two" 
+    style="
+      width: 15rem;
+      max-width: 80vw;
+    "
+  />
+  <img 
+    src="./screenshots/movile-design-03.jpeg" 
+    alt="Movile desing example three" 
+    style="
+      width: 15rem;
+      max-width: 80vw;
+    "
+  />
+  <img 
+    src="./screenshots/movile-design-04.jpeg" 
+    alt="Movile desing example four" 
+    style="
+      width: 15rem;
+      max-width: 80vw;
+    "
+  />
+  <img 
+    src="./screenshots/movile-design-05.jpeg" 
+    alt="Movile desing example five" 
+    style="
+      width: 15rem;
+      max-width: 80vw;
+    "
+  />
+</div>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github code](https://github.com/DF27ARTS/Multi_Step_Form_Challenge_Mentor)
+- Live Site URL: [Live site](https://df27arts.github.io/Multi_Step_Form_Challenge_Mentor)
 
 ## My process
+
+I began by considering whether to start with the mobile or desktop design. Ultimately, I opted to begin with the desktop design as it felt more comfortable to me. Once I had the design in place, I began applying CSS styles, and once those were complete, I implemented the JavaScript.
 
 ### Built with
 
@@ -59,60 +159,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Vanila Javscript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Typically, I don't use vanilla JavaScript to create projects. I have used React.js and Next.js for most of my projects, but with this particular project, I had the opportunity to work more extensively with vanilla JavaScript. Through the process, I learned a lot and gained a newfound appreciation for the benefits that libraries provide. Overall, I thoroughly enjoyed every step of the process and found it to be a lot of fun.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Fernando Rojas](https://portfoliio-three.vercel.app)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/DF27ARTS)
+- Twitter - [@\_DF_Fernando](https://twitter.com/_DF_Fernando)
+</div>

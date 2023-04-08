@@ -1,8 +1,10 @@
 /* __________ Imports __________ */
 import { CheckInputFormatStageOne } from "./form-stage-one.js";
+import { checkValuesSelectedStageThree } from "./form-stage-three.js";
 
 /* __________ Tags __________ */
 const stepNumber = document.querySelectorAll(".step-number");
+const sliderSection = document.querySelectorAll(".slider-section");
 
 /* __________ Functions __________ */
 export const setSidebarActiveButton = (index) => {
@@ -26,6 +28,7 @@ export const recreateSidebarButton = () => {
     newButton.classList.add("finished");
     if (index === 3) newButton.classList.add("step-number-active");
     newButton.textContent = `${index + 1}`;
+    newButton.type = "button";
 
     singleStepContainer[index].insertBefore(
       newButton,
@@ -39,10 +42,18 @@ stepNumber.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (!CheckInputFormatStageOne()) return;
 
+    if (index === 3 && !checkValuesSelectedStageThree()) {
+      setSidebarActiveButton(2);
+      sliderSection?.forEach((section) => {
+        section.style.transform = `translateX(-220%)`;
+      });
+
+      return;
+    }
+
     setSidebarActiveButton(index);
-    document.documentElement?.style.setProperty(
-      "--translate-fomrY",
-      `-${index}${index}0%`
-    );
+    sliderSection?.forEach((section) => {
+      section.style.transform = `translateX(-${index}${index}0%)`;
+    });
   });
 });

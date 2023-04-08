@@ -50,14 +50,21 @@ export const validateFormStageOne = (array) => {
     PHONE: /^\+(?:[0-9] ?){6,14}[0-9]$/,
   };
 
-  let value;
-  array.forEach((input) => {
-    value =
-      stageOne[input.name] &&
-      validations[input.name.toUpperCase()].test(stageOne[input.name])
-        ? true
-        : false;
-  });
+  const checkSingleInput = (name) => {
+    if (
+      stageOne[name] &&
+      validations[name.toUpperCase()].test(stageOne[name])
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  let value =
+    checkSingleInput(array[0].name) &&
+    checkSingleInput(array[1].name) &&
+    checkSingleInput(array[2].name);
 
   return value;
 };

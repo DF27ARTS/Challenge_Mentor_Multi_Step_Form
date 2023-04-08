@@ -20,6 +20,7 @@
     flex-grow: 1;
     border: 1px solid var(--light-gray);
     border-radius: .7rem;
+    background: var(--white);
 
     display: flex;
     flex-direction: column;
@@ -50,6 +51,7 @@
 
     flex-grow: 1;
     justify-content: flex-end;
+    align-items: flex-start;
 
     .billing-card-title {
       font-family: var(--font-bold);
@@ -138,6 +140,8 @@
     border-radius: 100vh;
     background: var(--marine-blue);
     cursor: pointer;
+    border: none;
+
 
     position: relative;
 

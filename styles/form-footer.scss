@@ -15,7 +15,6 @@
     font-family: var(--font-medium);
     font-size: inherit;
     padding: 0;
-    cursor: pointer;
 
     transition: 
       color 250ms ease,
@@ -32,6 +31,7 @@
 
     display: flex;
     align-items: flex-start;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -49,6 +49,7 @@
     background-color: var(--marine-blue);
     border-radius: .5rem;
     color: var(--light-gray);
+    cursor: pointer;
 
     &:hover,
     &:focus {
